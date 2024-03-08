@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: db-replicaset
-  namespace: db-ns
+  namespace: sqldb
   labels:
-    app: db
+    app: mysql
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: db
+      app: mysql
   template:
     metadata:
       labels:
-        app: db
+        app: mysql
     spec:
       containers:
       - name: db-container
@@ -23,5 +23,3 @@ spec:
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: "pw"
-      dnsPolicy: ClusterFirst
-      restartPolicy: Always
