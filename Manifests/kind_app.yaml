@@ -2,9 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
     name: app-pod
-    namespace: app-ns
-    labels:
-      type: app
+    namespace: webapp
 spec:
   containers:
   - name: app-container
