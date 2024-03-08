@@ -23,7 +23,7 @@ spec:
         image: 045104524585.dkr.ecr.us-east-1.amazonaws.com/my_app:v1
         env:
           - name: DBHOST
-            value: "10.244.0.26"  
+            value: "10.244.0.33"  
           - name: DBPORT
             value: "3306"
           - name: DBUSER
